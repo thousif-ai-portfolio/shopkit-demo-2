@@ -5,7 +5,7 @@ import re
 
 def slugify(text: str) -> str:
     """Turns a product name into a URL slug: "Blue T-Shirt (Large)" -> "blue-t-shirt-large"."""
-    slug = re.sub(r"[^a-z0-9]", "-", text.lower())
+    slug = re.sub(r"[^a-z0-9]+", "-", text.lower())
     return slug.strip("-")
 
 
